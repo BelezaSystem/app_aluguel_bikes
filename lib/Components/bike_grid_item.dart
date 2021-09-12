@@ -1,4 +1,3 @@
-import 'package:app_aluguel_bike_modulacao_mvp/Providers/cart_item.dart';
 import 'package:bikes/Models/bike.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
