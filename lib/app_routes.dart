@@ -1,5 +1,5 @@
 class AppRoutes{
-  static final HOME = "/bike-overview";
-  static final BIKE_DETAIL = '/bike-detail';
-  static final CART_DETAIL = '/cart-detail';
+  static final Home = "/bike-overview";
+  static final Bike_Default = '/bike-detail';
+  static final Cart_Default = '/cart-detail';
 }

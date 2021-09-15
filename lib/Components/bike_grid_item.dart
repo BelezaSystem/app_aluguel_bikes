@@ -58,7 +58,7 @@ class BikeGridItem extends StatelessWidget {
                         icon: Icon(Icons.monetization_on_outlined),
 
                         onPressed: (){
-                          Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+                          Navigator.of(context).pushNamed(AppRoutes.Cart_Default);
                         },
                       ),
 
@@ -84,7 +84,7 @@ class BikeGridItem extends StatelessWidget {
         ),
       ),
       onTap: (){
-        Navigator.of(context).pushNamed(AppRoutes.BIKE_DETAIL, arguments: bike);
+        Navigator.of(context).pushNamed(AppRoutes.Bike_Default, arguments: bike);
       },
     );
   }

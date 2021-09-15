@@ -14,7 +14,7 @@ class CartDetailScreen extends StatelessWidget {
     final List<Bike> bikes = Provider.of<CartItem>(context).bike; //!
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registro de Alugel'),
+        title: Text('Registro de Aluguel'),
         //centerTitle: true,
         backgroundColor: Colors.black87,
         actions: [
@@ -53,9 +53,6 @@ class CartDetailScreen extends StatelessWidget {
             ),
 
             ElevatedButton.icon(
-              //style: ButtonStyle(
-              //  backgroundColor: MaterialStateProperty.all<Color>(Colors.black87),
-              //),
               style:  ElevatedButton.styleFrom(
                 minimumSize: Size(180,40),
                 primary: Colors.black87,
@@ -66,9 +63,6 @@ class CartDetailScreen extends StatelessWidget {
             ),
 
             ElevatedButton.icon(
-              //style: ButtonStyle(
-              //  backgroundColor: MaterialStateProperty.all<Color>(Colors.black87),
-              //),
               style:  ElevatedButton.styleFrom(
                 minimumSize: Size(180,40),
                 primary: Colors.black87,
@@ -76,7 +70,7 @@ class CartDetailScreen extends StatelessWidget {
               icon: Icon(Icons.pedal_bike_rounded),
               label: Text("Ver mais bikes"),
               onPressed: (){
-                Navigator.of(context).pushNamed(AppRoutes.HOME);
+                Navigator.of(context).pushNamed(AppRoutes.Home);
               },
             )
           ],

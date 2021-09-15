@@ -28,7 +28,7 @@ class _BikeOverviewScreenState extends State<BikeOverviewScreen > {
           IconButton(
             icon: Icon(Icons.pedal_bike),
             onPressed: (){
-              Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+              Navigator.of(context).pushNamed(AppRoutes.Cart_Default);
             },
           ),
 
