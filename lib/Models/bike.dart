@@ -15,17 +15,17 @@ class Bike{
   final String imagemURL;
 
   Bike({
-    @required this.codigo,
-    @required this.nome,
-    @required this.preco,
-    @required this.descricao,
-    @required this.genero,
-    @required this.suspensao,
-    @required this.tamanho,
-    @required this.indicacao,
-    @required this.modalidade,
-    @required this.aro,
-    @required this.marchas,
-    @required this.imagemURL
+    required this.codigo,
+    required this.nome,
+    required this.preco,
+    required this.descricao,
+    required this.genero,
+    required this.suspensao,
+    required this.tamanho,
+    required this.indicacao,
+    required this.modalidade,
+    required this.aro,
+    required this.marchas,
+    required this.imagemURL
   });
 }
