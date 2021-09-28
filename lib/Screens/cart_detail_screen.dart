@@ -15,16 +15,13 @@ class CartDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Registro de Aluguel'),
-        //centerTitle: true,
         backgroundColor: Colors.black87,
         actions: [
           IconButton(
             icon: Icon(Icons.pedal_bike),
             onPressed: (){},
           ),
-
           Consumer<CartItem>(builder: (context, cartItem, _) => Text(cartItem.total.toString()),),
-
           SizedBox(
             width: 22,
           )
@@ -58,7 +55,7 @@ class CartDetailScreen extends StatelessWidget {
                 primary: Colors.black87,
               ),
               icon: Icon(Icons.shopping_cart),
-              label: Text("Ir para pagamento"),
+              label: Text("Alugar ${cartProvider.total} Bikes por R\$ ${cartProvider.somaTotal.toStringAsFixed(2)}"),
               onPressed: (){},
             ),
 
@@ -70,7 +67,7 @@ class CartDetailScreen extends StatelessWidget {
               icon: Icon(Icons.pedal_bike_rounded),
               label: Text("Ver mais bikes"),
               onPressed: (){
-                Navigator.of(context).pushNamed(AppRoutes.Home);
+                Navigator.of(context).pushNamed(AppRoutes.HOME);
               },
             )
           ],

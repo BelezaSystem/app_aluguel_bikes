@@ -14,24 +14,21 @@ class BikeOverviewScreen  extends StatefulWidget {
 }
 
 class _BikeOverviewScreenState extends State<BikeOverviewScreen > {
-
   final List<Bike> bikes = MOCK_BIKES;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Aluguel de Bikes"),
-        //centerTitle: true,
+        title: Text("Alugue sua Bike"),
         backgroundColor: Colors.black87,
         actions: [
           IconButton(
             icon: Icon(Icons.pedal_bike),
             onPressed: (){
-              Navigator.of(context).pushNamed(AppRoutes.Cart_Default);
+              Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
             },
           ),
-
           Consumer<CartItem>(builder: (context, cartItem, _) => Text(cartItem.total.toString()),),
 
           SizedBox(
