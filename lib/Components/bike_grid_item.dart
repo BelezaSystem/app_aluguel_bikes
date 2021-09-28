@@ -35,21 +35,31 @@ class BikeGridItem extends StatelessWidget {
           trailing: GestureDetector(
             child: Icon(Icons.add_shopping_cart),
             onTap: () {
-              showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Text("${bike.nome}"),
-                      content: Text(cartProvider.CheckListCart(bike, cartProvider.addBike)),
-                      actions: <Widget>[
-                        ElevatedButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text('Fechar'))
-                      ],
-                    );
-                  });
+              String resp = cartProvider.CheckListCart(bike, cartProvider.addBike);
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  padding: EdgeInsets.symmetric(vertical: 2),
+                  backgroundColor: Colors.black54,
+                  content: Center(
+                    child: Container(
+                      height: 100,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text("$resp",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Icon(Icons.check_circle, color: Colors.green, size: 50,),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+              ));
             },
           ),
         ),

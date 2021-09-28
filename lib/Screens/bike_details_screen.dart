@@ -22,9 +22,7 @@ class BikeDetailsScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
             },
           ),
-
           Consumer<CartItem>(builder: (context, cartItem, _) => Text(cartItem.total.toString()),),
-
           SizedBox(
             width: 22,
           )
@@ -33,7 +31,6 @@ class BikeDetailsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-
           children: [
             Image(
               image: CachedNetworkImageProvider(bike.imagemURL),
@@ -41,7 +38,6 @@ class BikeDetailsScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),
-
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Text("${bike.nome}",
@@ -52,7 +48,6 @@ class BikeDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
               child: Directionality(
@@ -63,7 +58,6 @@ class BikeDetailsScreen extends StatelessWidget {
                     style: TextStyle(color: Colors.black87),
                   ),),),
             ),
-
             Padding(
               padding: const EdgeInsets.only(bottom: 10,top: 10),
               child: ElevatedButton.icon(
@@ -72,7 +66,6 @@ class BikeDetailsScreen extends StatelessWidget {
                   primary: Colors.black87,
                 ),
                 icon: Icon(Icons.shopping_cart),
-
                 label: Text("Alugar Bike"),
                 onPressed: (){
                   String resp = cartProvider.CheckListCart(bike, cartProvider.addBike);
@@ -81,7 +74,7 @@ class BikeDetailsScreen extends StatelessWidget {
                       backgroundColor: Colors.black54,
                       content: Center(
                         child: Container(
-                          height: 250,
+                          height: 100,
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
